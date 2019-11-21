@@ -14,3 +14,62 @@ body {
   overflow: hidden;
 }
 
+*,
+*:hover {
+    cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  background-color: $primary-color;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.3s transform, 0.2s opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1) translate(-50%, -50%);
+
+  &.hover {
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+  }
+  &.holding {
+    transform: scale(0.6) translate(-50%, -50%);
+  }
+}
+
+.loop-wrapper {
+  display: flex;
+  width: 100px;
+  height: 23px;
+  overflow: hidden;
+  .loop-title {
+    display: flex;
+    align-items: center;
+    animation: textLoop 4s linear infinite;
+    will-change: transform;
+    span {
+      font-size: 16px;
+      border-bottom: 1px solid $primary-color;
+      transition: color .3s, border-color .3s;
+    }
+  }
+  &:hover {
+    span {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+  }
+}
+
+@keyframes textLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -43,5 +43,131 @@
         margin: 0 20px;
       }
     }
+    &-wrapper {
+      perspective: 100px;
+      width: 100%;
+    }
+  }
+}
+
+.pages {
+  .page-link {
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 200px;
+    background-color: $bg-color;
+    opacity: 1;
+    z-index: 10;
+    margin-top: -100px;
+    margin-left: -80px;
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      background-position: center;
+      background-size: cover;
+    }
+    .image__blend {
+      mix-blend-mode: luminosity;
+      transition: opacity .3s;
+      opacity: 1;
+      &:hover {
+        opacity: 0;
+      }
+    }
+    .image__normal {
+      opacity: 0;
+      transition: opacity .3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-1 {
+      left: 14.9%;
+      top: 34.6%;
+      transform: rotate(-7.3deg);
+      .image {
+        background-image: url(../images/pages/test1.jpeg);
+      }
+    }
+    &-2 {
+      left: 32%;
+      top: 72.9%;
+      transform: rotate(3.7deg);
+      .image {
+        background-image: url(../images/pages/test2.jpeg);
+      }
+    }
+    &-3 {
+      left: 64.4%;
+      top: 73%;
+      transform: rotate(-13.1deg);
+      .image {
+        background-image: url(../images/pages/test3.jpeg);
+      }
+    }
+    &-4 {
+      left: 84.8%;
+      top: 38.2%;
+      transform: rotate(14deg);
+      .image {
+        background-image: url(../images/pages/test4.jpeg);
+      }
+    }
+  }
+  &-cursor {
+    color: $accent-color;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+    transition: 0.3s transform, 0.2s opacity;
+    &.active {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+    }
+    .loop-wrapper span {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+    h3 {
+      font-size: 2.2em;
+      font-weight: 600;
+    }
+    svg.arrow {
+      position: absolute;
+      right: 0;
+      width: 80px;
+      fill: $accent-color;
+      margin-top: 4px;
+    }
+  }
+}
+
+.contacts {
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  &-wrapper {
+    position: absolute;
+    transform: translateX(100%);
+    right: 26px;
+    bottom: 26px;
+  }
+  .contact-link {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color; 
+    margin-right: 46px;
+    &:hover {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
   }
 }
