@@ -1,0 +1,47 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24vh;
+  &__avatar {
+    position: relative;
+    width: 90px;
+    height: 92px;
+    img {
+      position: absolute;
+      border-radius: 50%;
+      padding: 6px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    svg {
+      position: absolute;
+      height: 100%;
+      stroke: $primary-color;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin: 16px 0;
+    h1 {
+      font-family: $cormorant-font;
+      font-size: 4em;
+    }
+    h3 {
+      font-family: $syne-extra-font;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before, &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100px;
+        background-color: $primary-color;
+        margin: 0 20px;
+      }
+    }
+  }
+}

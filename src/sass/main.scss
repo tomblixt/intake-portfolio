@@ -1,0 +1,16 @@
+::-moz-selection {
+  background: $accent-color;
+}
+
+::selection {
+  background: $accent-color;
+}
+
+body {
+  background-color: $bg-color;
+  color: $primary-color;
+  font-family: $syne-font;
+  height: 100vh;
+  overflow: hidden;
+}
+
