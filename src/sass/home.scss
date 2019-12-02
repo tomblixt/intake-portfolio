@@ -1,9 +1,12 @@
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 24vh;
+  position: absolute;
+  top: 24vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
   &__avatar {
+    margin-left: 50%;
+    transform: translateX(-50%);
     position: relative;
     width: 90px;
     height: 92px;
@@ -24,9 +27,14 @@
   &__title {
     text-align: center;
     margin: 16px 0;
+    .reveal-wrapper {
+      height: 4em;
+      overflow: hidden;
+    }
     h1 {
-      font-family: $cormorant-font;
+      position: relative;
       font-size: 4em;
+      font-family: $cormorant-font;
     }
     h3 {
       font-family: $syne-extra-font;
@@ -45,12 +53,16 @@
     }
     &-wrapper {
       perspective: 100px;
-      width: 100%;
     }
   }
 }
 
 .pages {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
   .page-link {
     display: block;
     position: absolute;
@@ -59,8 +71,8 @@
     background-color: $bg-color;
     opacity: 1;
     z-index: 10;
-    margin-top: -100px;
-    margin-left: -80px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
     .image {
       position: absolute;
       width: 100%;
@@ -84,34 +96,30 @@
         opacity: 1;
       }
     }
-    &-1 {
-      left: 14.9%;
-      top: 34.6%;
-      transform: rotate(-7.3deg);
+    &:nth-child(1) {
+      left: 12.8%;
+      top: 38.9%;
       .image {
         background-image: url(../images/pages/test1.jpeg);
       }
     }
-    &-2 {
-      left: 32%;
-      top: 72.9%;
-      transform: rotate(3.7deg);
+    &:nth-child(2) {
+      left: 37.3%;
+      top: 72.7%;
       .image {
         background-image: url(../images/pages/test2.jpeg);
       }
     }
-    &-3 {
-      left: 64.4%;
-      top: 73%;
-      transform: rotate(-13.1deg);
+    &:nth-child(3) {
+      left: 65.4%;
+      top: 78.4%;
       .image {
         background-image: url(../images/pages/test3.jpeg);
       }
     }
-    &-4 {
-      left: 84.8%;
-      top: 38.2%;
-      transform: rotate(14deg);
+    &:nth-child(4) {
+      left: 85.7%;
+      top: 36.8%;
       .image {
         background-image: url(../images/pages/test4.jpeg);
       }
@@ -154,17 +162,19 @@
   transform: rotate(-90deg);
   transform-origin: bottom left;
   &-wrapper {
+    z-index: 2;
     position: absolute;
     transform: translateX(100%);
     right: 26px;
     bottom: 26px;
   }
   .contact-link {
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-decoration: none;
     color: $primary-color;
     border-bottom: 1px solid $primary-color; 
     margin-right: 46px;
+    transition: color .4s, border-color .4s;
     &:hover {
       color: $accent-color;
       border-color: $accent-color;
