@@ -16,7 +16,7 @@ body {
 
 *,
 *:hover {
-    cursor: none;
+  cursor: none;
 }
 
 .cursor {
@@ -30,6 +30,7 @@ body {
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
+  mix-blend-mode: hue;
 }
 
 .loop-wrapper {
