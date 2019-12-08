@@ -19,6 +19,10 @@ body {
   cursor: none;
 }
 
+main {
+  height: 100%;
+}
+
 .cursor {
   position: fixed;
   background-color: $primary-color;

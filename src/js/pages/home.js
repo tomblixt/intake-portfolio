@@ -1,7 +1,7 @@
 import gsap, { Power2 } from 'gsap'
 
 export default class Home {
-  constructor(container) {''
+  constructor(container) {
     // pages
     this.pages = container.querySelector('.pages')
     this.links = this.pages.querySelectorAll('.page-link')
@@ -35,10 +35,11 @@ export default class Home {
         .set(this.links, { y: -220, alpha: 0, width: 80, pointerEvents: 'none' })
         .set(this.revealWrapper, { clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 100%)' })
         .set(this.revealText, { y: '100%' })
+        .set(this.links, {pointerEvents: 'all'}, delay + 1.4)
         .to(this.intro, { alpha: 1 }, delay)
         .to(this.revealWrapper, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', ease: Power2.easeOut }, delay + .3)
         .to(this.revealText, { y: 0, ease: Power2.easeOut }, delay + .2)
-        .to(this.links, { y: 0, alpha: 1, width: 160, pointerEvents: 'all', ease: Power2.easeOut, stagger: .3,  }, delay + .8)
+        .to(this.links, { y: 0, alpha: 1, width: 160, ease: Power2.easeOut, stagger: .3,  }, delay + .8)
     })
   }
   listeners() {
@@ -84,7 +85,7 @@ export default class Home {
       gsap.to(this.pagesCursor, .2, {
         css: {
           left: this.mouse.x,
-          top: this.mouse.y
+          top: this.mouse.y,
         },
         ease: Power2.easeOut
       })

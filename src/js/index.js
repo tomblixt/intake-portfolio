@@ -6,7 +6,9 @@ import gsap from 'gsap'
 
 import loops from './loops'
 import Cursor from './cursor'
+// pages
 import Home from './pages/home'
+import WorkPage from './pages/work'
 
 const isDebug = process.env.NODE_ENV === 'development'
 
@@ -35,10 +37,10 @@ barba.init({
     {
       name: 'toPage',
       once({ next }) {
-        enterPages(next)
+        return enterWorkPage(next)
       },
       beforeEnter({ next }) {
-        enterPages(next)
+        return enterWorkPage(next)
       },
       beforeLeave({ current }) {
         return leavePage(current)
@@ -50,22 +52,24 @@ barba.init({
 const cursor = new Cursor()
 
 // Init pages
-const enterHome = (next, callback) => {
+const enterHome = next => {
   const { container } = next
-  return new Promise(resolve => {
-    loops(container)
-    cursor.setLinks(container)
-    const home = new Home(container)
-    home.animateIn().then(() => {
-      resolve()
-    })
-  })
-}
 
-const enterPages = next => {
-  const { container } = next
   loops(container)
   cursor.setLinks(container)
+
+  const home = new Home(container)
+  return home.animateIn()
+}
+
+const enterWorkPage = next => {
+  const { container, namespace } = next
+
+  loops(container)
+  cursor.setLinks(container)
+
+  const work = new WorkPage(container, namespace)
+  return work.animateIn()
 }
 
 const leavePage = current => {
