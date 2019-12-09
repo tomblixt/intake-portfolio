@@ -48,17 +48,18 @@ export default class Cursor {
   }
   setLinks(container) {
     this.links.forEach(link => {
-      link.removeEventListener('mouseenter', () => console.log('working'))
-      link.removeEventListener('mouseleave', () => console.log('working'))
+      link.removeEventListener('mouseenter', null)
+      link.removeEventListener('mouseleave', null)
     })
-    this.links = container.querySelectorAll('a')
+    this.links = container.querySelectorAll('a, .cursor-highlight img, .cursor-highlight')
     this.linkListeners()
   }
   animateCursor() {
+    const cursorCenter = this.cursor.offsetWidth / 2
     gsap.to(this.cursor, .2, {
       css: {
-        left: this.mouse.x,
-        top: this.mouse.y,
+        left: this.mouse.x - cursorCenter,
+        top: this.mouse.y - cursorCenter,
         opacity: this.isSet ? 1 : 0
       },
       ease: Power2.easeOut

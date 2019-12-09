@@ -54,21 +54,21 @@ const cursor = new Cursor()
 // Init pages
 const enterHome = next => {
   const { container } = next
+  const home = new Home(container)
 
   loops(container)
   cursor.setLinks(container)
 
-  const home = new Home(container)
   return home.animateIn()
 }
 
 const enterWorkPage = next => {
   const { container, namespace } = next
-
+  const work = new WorkPage(container, namespace)
+  
   loops(container)
   cursor.setLinks(container)
 
-  const work = new WorkPage(container, namespace)
   return work.animateIn()
 }
 

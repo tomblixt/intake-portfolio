@@ -4,71 +4,17 @@
     "text": "Dit is wat teks over wat hier naar te zien is",
     "media": [
       {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
+        "type": "vid",
+        "file": "tuen.mp4",
         "style": { "bottom": 0, "right": 0, "width": "71%" }
       },
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
+        "file": "teunenik_1.jpg",
         "style": { "top": 0, "left": 0, "width": "31%" }
       }
     ],
     "height": 320,
-    "indent": 0
-  },
-  {
-    "title": "Teun en Tom",
-    "text": "Dit is wat teks over wat hier naar te zien is",
-    "media": [
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
-      },
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
-      }
-    ],
-    "height": 300,
-    "indent": 20
-  },
-  {
-    "title": "Teun en Tom",
-    "text": "Dit is wat teks over wat hier naar te zien is",
-    "media": [
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
-      },
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
-      }
-    ],
-    "height": 300,
-    "indent": 0
-  },
-  {
-    "title": "Teun en Tom",
-    "text": "Dit is wat teks over wat hier naar te zien is",
-    "media": [
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
-      },
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
-      }
-    ],
-    "height": 300,
     "indent": 0
   }
 ]

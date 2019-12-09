@@ -68,7 +68,8 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       { from: './public', to: finalPath, force: true },
-      { from: './src/images', to: path.join(finalPath, '/images'), force: true },
+      { from: './src/images', to: path.join(finalPath, '/img'), force: true },
+      { from: './src/videos', to: path.join(finalPath, '/vid'), force: true },
     ]),
     new MiniCssExtractPlugin({
       filename: 'style.css',

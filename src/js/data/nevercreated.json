@@ -4,13 +4,13 @@
     "text": "Dit is wat teks over wat hier naar te zien is",
     "media": [
       {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
+        "type": "vid",
+        "file": "tuen.mp4",
         "style": { "bottom": 0, "right": 0, "width": "71%" }
       },
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
+        "file": "teunenik_1.jpg",
         "style": { "top": 0, "left": 0, "width": "31%" }
       }
     ],
@@ -18,57 +18,93 @@
     "indent": 0
   },
   {
-    "title": "Teun en Tom",
+    "title": "Contact Website",
     "text": "Dit is wat teks over wat hier naar te zien is",
     "media": [
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
+        "file": "contactwebsite_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "48%" }
       },
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
+        "file": "contactwebsite_2.jpg",
+        "style": { "top": "29%", "right": 0, "width": "64%" }
+      },
+      {
+        "type": "img",
+        "file": "contactwebsite_3.jpg",
+        "style": { "bottom": 0, "left": "8%", "width": "71%" }
       }
     ],
-    "height": 300,
+    "height": 660,
+    "indent": 60
+  },
+  {
+    "title": "NatuurLab",
+    "text": "Dit is wat teks over wat hier naar te zien is",
+    "media": [
+      {
+        "type": "img",
+        "file": "natuurlab_2.jpg",
+        "style": { "top": 0, "right": 0, "width": "31%" }
+      },
+      {
+        "type": "img",
+        "file": "natuurlab_1.jpg",
+        "style": { "bottom": 0, "left": 0, "width": "75%" }
+      }
+    ],
+    "height": 330,
+    "indent": 60
+  },
+  {
+    "title": "STTA",
+    "text": "Dit is wat teks over wat hier naar te zien is",
+    "media": [
+      {
+        "type": "img",
+        "file": "stta_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "90%" }
+      },
+      {
+        "type": "img",
+        "file": "stta_2.jpg",
+        "style": { "bottom": 0, "right": 0, "width": "46%" }
+      }
+    ],
+    "height": 358,
+    "indent": 10
+  },
+  {
+    "title": "MaxDijk",
+    "text": "Dit is wat teks over wat hier naar te zien is",
+    "media": [
+      {
+        "type": "vid",
+        "file": "maxdijk.mp4",
+        "style": { "top": 0, "left": "11%", "width": "78%" }
+      }
+    ],
+    "height": 270,
     "indent": 20
   },
   {
-    "title": "Teun en Tom",
+    "title": "Pretty Up",
     "text": "Dit is wat teks over wat hier naar te zien is",
     "media": [
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
+        "file": "prettyup_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "50%" }
       },
       {
         "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
+        "file": "prettyup_2.jpg",
+        "style": { "bottom": 0, "right": 0, "width": "84%" }
       }
     ],
-    "height": 300,
-    "indent": 0
-  },
-  {
-    "title": "Teun en Tom",
-    "text": "Dit is wat teks over wat hier naar te zien is",
-    "media": [
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
-      },
-      {
-        "type": "img",
-        "path": "images/nevercreated/teunenik_2.jpg",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
-      }
-    ],
-    "height": 300,
-    "indent": 0
+    "height": 380,
+    "indent": 10
   }
 ]

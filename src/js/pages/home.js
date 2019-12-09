@@ -82,10 +82,12 @@ export default class Home {
   }
   animateCursor() {
     if (this.isHovering) {
+      const cursorCenterY = this.pagesCursor.offsetHeight / 2
+      const cursorCenterX = this.pagesCursor.offsetWidth / 2
       gsap.to(this.pagesCursor, .2, {
         css: {
-          left: this.mouse.x,
-          top: this.mouse.y,
+          left: this.mouse.x - cursorCenterX,
+          top: this.mouse.y - cursorCenterY,
         },
         ease: Power2.easeOut
       })

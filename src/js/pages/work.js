@@ -1,13 +1,18 @@
 import Scrollbar from 'smooth-scrollbar';
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll'
+import HorizontalScrollPlugin from '../utils/horizontalScrollPlugin'
+
 import gsap, { Power2 } from 'gsap'
+
+import MediaView from './mediaView'
+import createMedia from './createMedia'
 
 // Data
 import nevercreatedData from '../data/nevercreated.json'
 import enjojData from '../data/enjoj.json'
 import persoonlijkData from '../data/persoonlijk.json'
 
-Scrollbar.use(OverscrollPlugin)
+Scrollbar.use(HorizontalScrollPlugin, OverscrollPlugin)
 
 export default class WorkPage {
   constructor(container, name) {
@@ -20,15 +25,17 @@ export default class WorkPage {
     } else {
       return
     }
-
+    
     this.container = container
+    this.name = name
     this.wrapper = container.querySelector('.wrapper')
-    this.parallaxItems = []
+    this.mediaItems = []
 
     this.buildItems()
     this.setLineHeight()
-    // scroll
+
     this.initScroll()
+    this.listeners()
     this.animateParallax()
   }
   animateIn() {
@@ -45,14 +52,22 @@ export default class WorkPage {
       })
       timeline
         .set(this.wrapper, { alpha: 0, y: '45%' })
-        .to(this.wrapper, { alpha: 1, y: 0 }, delay)
+        .to(this.wrapper, { alpha: 1, y: 0, ease: Power2.easeOut }, delay)
+    })
+  }
+  listeners() {
+    window.addEventListener('resize', this.animateParallax.bind(this, this.scroll.offset.y))
+    this.mediaItems.forEach(({ data, media }) => {
+      media.forEach(({tag}) => {
+        tag.addEventListener('click', () => new MediaView(this.container, this.scroll, this.name, data))
+      })
     })
   }
   initScroll() {
     this.scroll = Scrollbar.init(this.container, {renderByPixels: false});
     this.scroll.track.xAxis.element.remove()
     this.scroll.track.yAxis.element.remove()    
-    this.scroll.addListener((s) => this.onScroll(s))
+    this.scroll.addListener(s => this.onScroll(s))
   }
   onScroll({ offset }) {
     this.animateParallax(offset.y)
@@ -84,17 +99,14 @@ export default class WorkPage {
       let speed = 0.4
       item.media.forEach(mediaItem => {
         const mediaTag = document.createElement('div')
-        mediaTag.classList = 'work-item__media'
+        mediaTag.classList = 'work-item__media cursor-highlight'
         gsap.set(mediaTag, { css: mediaItem.style })
 
-        let tag
-        if (mediaItem.type === 'img') {
-          tag = document.createElement('img')
-          tag.src = mediaItem.path
-        }
+        const tag = createMedia(mediaItem, this.name)
         mediaTag.appendChild(tag)
+        
         media.push({ tag, speed })
-        speed += 0.6
+        speed += 0.8
 
         itemContent.appendChild(mediaTag)
       })
@@ -103,12 +115,12 @@ export default class WorkPage {
       itemTag.appendChild(itemTitle)
 
       workTag.appendChild(itemTag)
-      this.parallaxItems.push({ main: itemTag, media })
+      this.mediaItems.push({ main: itemTag, data: item.media, media })
     })
   }
   setLineHeight() {
     const line = this.container.querySelector('.line-wrapper')
-    let height = 54
+    let height = 86
     this.workData.forEach(item => {
       height += (item.height - item.indent)
     })
@@ -117,7 +129,7 @@ export default class WorkPage {
   }
   animateParallax(offset = 0) {
     const screenCenter = window.innerHeight / 2 + offset
-    this.parallaxItems.forEach(({ main, media }) => {
+    this.mediaItems.forEach(({ main, media }) => {
       const itemTop = main.offsetTop
       const itemCenter = main.offsetHeight / 2
       const itemPos = itemCenter + itemTop

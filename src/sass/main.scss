@@ -33,8 +33,7 @@ main {
   user-select: none;
   pointer-events: none;
   z-index: 10000;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: hue;
+  mix-blend-mode: overlay;
 }
 
 .loop-wrapper {

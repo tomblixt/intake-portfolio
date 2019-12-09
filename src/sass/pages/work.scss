@@ -1,0 +1,131 @@
+.content-page {
+  .wrapper {
+    position: relative;
+    opacity: 0;
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 85px 0;
+  }
+  &__title {
+    position: relative;
+    font-size: 3.2em;
+    font-family: $cormorant-font;
+  }
+  .line {
+    width: 1px;
+    background-color: $primary-color;
+    height: 100%;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 85px;
+      background-image: linear-gradient($bg-color, $primary-color );
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+  }  
+  .work {
+    padding: 86px 0;
+    &-item {
+      display: flex;
+      align-items: center;
+      &__media {
+        position: absolute;
+        max-height: 100%;
+        video {
+          width: 100%;
+        }
+      }
+      &__content {
+        width: 46%;
+        position: relative;
+      }
+      &__title {
+        position: relative;
+        width: 50%;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 9px;
+          height: 9px;
+          background-color: $primary-color;
+          border-radius: 50%;
+        }
+        h3 {
+          color: $accent-color;
+          font-weight: 600;
+          font-size: 1.8rem;
+          margin-bottom: .1em;
+        }
+        p {
+          opacity: .6;
+        }
+      }
+      &:nth-child(odd) {
+        flex-direction: row;
+        .work-item {
+          &__content {
+            margin-right: 4%;
+          }
+          &__title {
+            text-align: left;
+            padding-left: 38px;
+            &:before {
+              left: 0;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        .work-item {
+          &__content {
+            margin-left: 4%;
+          }
+          &__title {
+            text-align: right;
+            padding-right: 38px;
+            &:before {
+              right: 0;
+              top: 50%;
+              transform: translate(50%, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .media-view {
+    position: absolute;
+    width: 100%;
+    background: rgba($bg-color, .8);
+    top: 0;
+    left: 0;
+    &__content {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+    &__media {
+      padding-left: 10%;
+      height: 60%;
+      img, video {
+        height: 100%;
+        max-width: initial;
+      }
+      &:last-child {
+        padding-right: 10%;
+      }
+    }
+  }
+}
