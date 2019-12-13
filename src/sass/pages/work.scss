@@ -11,6 +11,16 @@
     position: relative;
     font-size: 3.2em;
     font-family: $cormorant-font;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100px;
+      background-color: $primary-color;
+      margin: 0 20px;
+    }
   }
   .line {
     width: 1px;
@@ -63,10 +73,13 @@
           color: $accent-color;
           font-weight: 600;
           font-size: 1.8rem;
-          margin-bottom: .1em;
+          margin-bottom: .2em;
         }
         p {
           opacity: .6;
+          line-height: 1.2;
+          width: 60%;
+          margin-left: auto;
         }
       }
       &:nth-child(odd) {
@@ -82,6 +95,9 @@
               left: 0;
               top: 50%;
               transform: translate(-50%, -50%);
+            }
+            p {
+              margin-left: 0;
             }
           }
         }

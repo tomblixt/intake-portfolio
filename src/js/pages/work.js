@@ -87,7 +87,7 @@ export default class WorkPage {
       texth3.innerText = item.title
       itemTitle.appendChild(texth3)
       const textp = document.createElement('p')
-      textp.innerText = item.text
+      textp.innerHTML = item.text
       itemTitle.appendChild(textp)
       
       // content

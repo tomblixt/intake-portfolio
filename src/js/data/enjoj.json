@@ -1,20 +1,61 @@
 [
   {
-    "title": "Teun en Tom",
-    "text": "Dit is wat teks over wat hier naar te zien is",
+    "title": "Werk [Bijbaan]",
+    "text": "Bij mijn snuffelstage zocht ik een mooi stageplek die heb ik in mijn eigen dorp kunnen viden, sinsdien werk ik daar dan ook",
     "media": [
       {
-        "type": "vid",
-        "file": "tuen.mp4",
-        "style": { "bottom": 0, "right": 0, "width": "71%" }
+        "type": "img",
+        "file": "werk_1.png",
+        "style": { "left": 0, "top": 0, "width": "58%" }
       },
       {
         "type": "img",
-        "file": "teunenik_1.jpg",
-        "style": { "top": 0, "left": 0, "width": "31%" }
+        "file": "werk_2.png",
+        "style": { "bottom": 0, "right": 0, "width": "71%" }
       }
     ],
     "height": 320,
     "indent": 0
+  },
+  {
+    "title": "Enjoj app",
+    "text": "Enjoj bestaat uit bedrijven apps in één app<br><br>Ik heb de app is geheel opnieuw ontworpen, en is nu in de prototype fase",
+    "media": [
+      {
+        "type": "img",
+        "file": "app_1.jpg",
+        "style": { "right": 0, "bottom": 0, "width": "85%" }
+      },
+      {
+        "type": "img",
+        "file": "app_2.png",
+        "style": { "top": "5%", "right": "4%", "width": "63%" }
+      },
+      {
+        "type": "vid",
+        "file": "app.mp4",
+        "style": { "left": 0, "top": 0, "width": "29%" }
+      }
+    ],
+    "height": 420,
+    "indent": 42
+  },
+  {
+    "title": "Wait app",
+    "text": "Met wait kan je toegang krijgen op lees media afhankelijk van de locatie",
+    "media": [
+      {
+        "type": "img",
+        "file": "wait_1.png",
+        "style": { "left": "22%", "top": 0, "width": "32%" }
+      },
+      {
+        "type": "img",
+        "file": "wait_2.png",
+        "style": { "right": "22%", "bottom": 0, "width": "32%" }
+      }
+    ],
+    "height": 480,
+    "indent": 46
   }
 ]
