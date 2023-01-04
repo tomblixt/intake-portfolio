@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Teun en Tom",
+    "text": "Samen met een heeele goeie vriend Teun maak ik vaak mooie projecten",
+    "media": [
+      {
+        "type": "vid",
+        "file": "tuen.mp4",
+        "style": { "bottom": 0, "right": 0, "width": "71%" }
+      },
+      {
+        "type": "img",
+        "file": "teunenik_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "31%" }
+      }
+    ],
+    "height": 320,
+    "indent": 0
+  },
+  {
+    "title": "Contact Website",
+    "text": "Met onze website zijn we nu al een enige tijd mee bezig om hem helemaal perfect te krijgen<br><br>Dit was voor mij het eerste contact met het maken van websites",
+    "media": [
+      {
+        "type": "img",
+        "file": "contactwebsite_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "48%" }
+      },
+      {
+        "type": "img",
+        "file": "contactwebsite_2.jpg",
+        "style": { "top": "29%", "right": 0, "width": "64%" }
+      },
+      {
+        "type": "img",
+        "file": "contactwebsite_3.jpg",
+        "style": { "bottom": 0, "left": "8%", "width": "71%" }
+      }
+    ],
+    "height": 660,
+    "indent": 60
+  },
+  {
+    "title": "NatuurLab",
+    "text": "Een van de eerste projecten die we hebben gedaan is een video maken over een dagje bij NatuurLab",
+    "media": [
+      {
+        "type": "img",
+        "file": "natuurlab_2.jpg",
+        "style": { "top": 0, "right": 0, "width": "31%" }
+      },
+      {
+        "type": "vid",
+        "file": "natuurlab.mp4",
+        "style": { "bottom": 0, "left": 0, "width": "75%" }
+      }
+    ],
+    "height": 330,
+    "indent": 60
+  },
+  {
+    "title": "STTA",
+    "text": "We kregen de kans door een vriend van ons om de aftermovie te maken van Stichting Trekker-Trek Alphen",
+    "media": [
+      {
+        "type": "vid",
+        "file": "stta.mp4",
+        "style": { "top": 0, "left": 0, "width": "90%" }
+      },
+      {
+        "type": "img",
+        "file": "stta_2.jpg",
+        "style": { "bottom": 0, "right": 0, "width": "46%" }
+      }
+    ],
+    "height": 358,
+    "indent": 10
+  },
+  {
+    "title": "MaxDijk",
+    "text": "Max van Dijk maakt fotos. Om zijn foto's te delen vroeg hij aan ons om een website te maken",
+    "media": [
+      {
+        "type": "vid",
+        "file": "maxdijk.mp4",
+        "style": { "top": 0, "left": "11%", "width": "78%" }
+      }
+    ],
+    "height": 270,
+    "indent": 20
+  },
+  {
+    "title": "Pretty Up",
+    "text": "Momenteel zijn we bezig voor een beautyzaak, met het maken van video's die het proces laten zien",
+    "media": [
+      {
+        "type": "img",
+        "file": "prettyup_1.jpg",
+        "style": { "top": 0, "left": 0, "width": "50%" }
+      },
+      {
+        "type": "img",
+        "file": "prettyup_2.jpg",
+        "style": { "bottom": 0, "right": 0, "width": "84%" }
+      }
+    ],
+    "height": 380,
+    "indent": 10
+  }
+]

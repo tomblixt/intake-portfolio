@@ -1,31 +1,19 @@
 {
   "name": "the-portofolio",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
-  },
-  "author": "tomv-m",
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.5",
-    "css-loader": "^3.2.0",
-    "file-loader": "^4.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "sass": "^1.57.1",
-    "sass-loader": "^8.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2"
+    "dev": "parcel ./pages/*.html",
+    "build": "parcel build ./pages/*.html"
   },
   "dependencies": {
     "@barba/core": "2.8.0",
     "@barba/prefetch": "^2.1.8",
     "gsap": "^3.0.1",
     "smooth-scrollbar": "^8.5.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2"
   }
 }

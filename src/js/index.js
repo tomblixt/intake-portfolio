@@ -1,5 +1,3 @@
-import '../sass/style.scss'
-
 import barba from '@barba/core'
 import barbaPrefetch from '@barba/prefetch'
 import gsap from 'gsap'
@@ -29,10 +27,8 @@ barba.init({
         return leavePage(current)
       },
       to: {
-        namespace: [
-          'home'
-        ]
-      }
+        namespace: ['home'],
+      },
     },
     {
       name: 'toPage',
@@ -44,15 +40,15 @@ barba.init({
       },
       beforeLeave({ current }) {
         return leavePage(current)
-      }
-    }
-  ]
+      },
+    },
+  ],
 })
 
 const cursor = new Cursor()
 
 // Init pages
-const enterHome = next => {
+const enterHome = (next) => {
   const { container } = next
   const home = new Home(container)
 
@@ -62,24 +58,26 @@ const enterHome = next => {
   return home.animateIn()
 }
 
-const enterWorkPage = next => {
+const enterWorkPage = (next) => {
   const { container, namespace } = next
   const work = new WorkPage(container, namespace)
-  
+
   loops(container)
   cursor.setLinks(container)
 
   return work.animateIn()
 }
 
-const leavePage = current => {
+const leavePage = (current) => {
   const { container } = current
-  return new Promise(resolve => {
-    gsap.to(container, .6, { alpha: 0, onComplete: () => {
+  return new Promise((resolve) => {
+    gsap.to(container, 0.6, {
+      alpha: 0,
+      onComplete: () => {
         cursor.leaveLink()
         container.remove()
         resolve()
-      } 
+      },
     })
   })
 }

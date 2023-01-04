@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Sporen Zoeker",
+    "text": "Sporen Zoeker is een webapp waar routes in staan van in de omgeving Gilze en Rijen",
+    "media": [
+      {
+        "type": "vid",
+        "file": "sporenzoeker.mp4",
+        "style": { "top": 0, "left": 0, "width": "78%" }
+      },
+      {
+        "type": "img",
+        "file": "sporenzoeker_1.png",
+        "style": { "bottom": 0, "right": 0, "width": "27%" }
+      }
+    ],
+    "height": 380,
+    "indent": 0
+  },
+  {
+    "title": "Video's",
+    "text": "",
+    "media": [
+      {
+        "type": "vid",
+        "file": "crete.mp4",
+        "style": { "top": 0, "right": 0, "width": "58%" }
+      },
+      {
+        "type": "vid",
+        "file": "mows.mp4",
+        "style": { "bottom": 0, "left": 0, "width": "78%" }
+      }
+    ],
+    "height": 420,
+    "indent": 60
+  },
+  {
+    "title": "Foto's",
+    "text": "",
+    "media": [
+      {
+        "type": "img",
+        "file": "foto_1.jpg",
+        "style": { "top": 0, "left": "4%", "width": "32%" }
+      },
+      {
+        "type": "img",
+        "file": "foto_2.jpg",
+        "style": { "top": "10%", "right": "18%", "width": "32%" }
+      },
+      {
+        "type": "img",
+        "file": "foto_4.jpg",
+        "style": { "bottom": 0, "left": 0, "width": "32%" }
+      },
+      {
+        "type": "img",
+        "file": "foto_3.jpg",
+        "style": { "top": "26%", "left": "23%", "width": "32%" }
+      },
+      {
+        "type": "img",
+        "file": "foto_5.jpg",
+        "style": { "bottom": "18%", "right": 0, "width": "32%" }
+      }
+    ],
+    "height": 640,
+    "indent": 56
+  }
+]
