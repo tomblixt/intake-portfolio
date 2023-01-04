@@ -15,7 +15,7 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.13.0",
+    "sass": "^1.57.1",
     "sass-loader": "^8.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
@@ -23,7 +23,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@barba/core": "^2.8.0",
+    "@barba/core": "2.8.0",
     "@barba/prefetch": "^2.1.8",
     "gsap": "^3.0.1",
     "smooth-scrollbar": "^8.5.1"
