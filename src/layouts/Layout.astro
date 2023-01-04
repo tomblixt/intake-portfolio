@@ -1,0 +1,20 @@
+---
+import '../assets/styles/index.scss'
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{title} ─ Tom van Merrienboer</title>
+    <script src="../js/index.js"></script>
+  </head>
+
+  <body data-barba="wrapper">
+    <slot />
+  </body>
+</html>

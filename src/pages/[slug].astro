@@ -1,0 +1,15 @@
+---
+import WorkLayout from '../layouts/WorkLayout.astro'
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'enjoj' }, props: { name: 'Enjoj' } },
+    { params: { slug: 'nevercreated' }, props: { name: 'Never Created' } },
+    { params: { slug: 'persoonlijk' }, props: { name: 'Persoonlijk' } },
+  ]
+}
+
+const { name } = Astro.props
+---
+
+<WorkLayout name={name} />

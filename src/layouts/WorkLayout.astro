@@ -1,0 +1,27 @@
+---
+import Layout from './Layout.astro'
+
+const { name } = Astro.props
+const namespace = name.replace(/\s/g, '').toLowerCase()
+---
+
+<Layout title={name}>
+  <main data-barba="container" data-barba-namespace={namespace}>
+    <div class="content-page">
+      <div class="wrapper">
+        <header>
+          <a class="loop-wrapper" href="/">
+            <div class="loop-title">
+              <span>close</span>
+            </div>
+          </a>
+          <h2 class="content-page__title">{name}</h2>
+        </header>
+        <div class="line-wrapper">
+          <div class="line"></div>
+        </div>
+        <div class="work"></div>
+      </div>
+    </div>
+  </main>
+</Layout>

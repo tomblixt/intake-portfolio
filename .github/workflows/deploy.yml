@@ -1,4 +1,4 @@
-name: Github Pages Parcel CI
+name: Github Pages Astro CI
 
 on:
   push:
@@ -14,32 +14,21 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Checkout your repository using git
+        uses: actions/checkout@v2
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
-      - name: Build with npm
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
+          lfs: true
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
+        # with:
+        # path: . # The root location of your Astro project inside the repository. (optional)
+        # node-version: 16 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
+        # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
   # Deployment job
   deploy:

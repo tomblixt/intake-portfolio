@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "parcel ./pages/*.html",
-    "build": "parcel build ./pages/*.html"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
     "@barba/core": "2.8.0",
     "@barba/prefetch": "^2.1.8",
+    "astro": "^1.9.0",
     "gsap": "^3.0.1",
     "smooth-scrollbar": "^8.5.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.2",
-    "parcel": "^2.8.2"
+    "sass": "^1.57.1"
   }
 }
